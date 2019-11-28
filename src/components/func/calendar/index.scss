@@ -1,0 +1,110 @@
+.calendar-selector-container {
+  .calendar-header {
+    display: flex;
+    padding: 12px 15px;
+    background: #fff;
+    color: #fff;
+    .header-left,
+    .header-right {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      font-size: 14px;
+      .left-arrow,
+      .right-arrow {
+        width: 26px;
+        height: 26px;
+      }
+      .left-text,
+      .right-text {
+        color: #333;
+        line-height: 45px;
+        font-size: 32px;
+      }
+      .left-text {
+        padding-left: 10px;
+      }
+      .right-text {
+        padding-right: 10px;
+      }
+      .ban-text {
+        color: #ccc;
+      }
+    }
+
+    .header-right {
+      font-size: 14px;
+    }
+    .header-center {
+      flex: 1;
+      text-align: center;
+      font-size: 32px;
+      color: #333;
+      font-weight: 700;
+    }
+  }
+  .calendar-week {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    background: #f2f2f2;
+    color: #666;
+    font-size: 32px;
+    height: 70px;
+    .list {
+      flex: 1;
+      text-align: center;
+      line-height: 70px;
+    }
+  }
+  .calendar-day {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 5px;
+    position: relative;
+    .list {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      width: 14.28%;
+      height: 110px;
+      text-align: center;
+      .day {
+        width: 64px;
+        height: 64px;
+        line-height: 64px;
+        border-radius: 50%;
+        font-size: 32px;
+        color: #666;
+      }
+      .sell-out {
+        font-size: 22px;
+      }
+      .price {
+        margin-left: -4px;
+        padding-top: 4px;
+        font-size: 20px;
+        line-height: 28px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color: #FF3533;
+      }
+    }
+    .local-month {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      z-index: -1;
+      font-size: 1px;
+      width: 100px;
+      height: 140px;
+      margin-top: -70px;
+      margin-left: -50px;
+      text-align: center;
+      color: #f5f6f7;
+    }
+  }
+}

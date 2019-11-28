@@ -1,0 +1,249 @@
+.sku-selector-container {
+  .outer-selector {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-items: center;
+    padding: 40px 24px;
+
+    > .title {
+      position: relative;
+      text-align: center;
+      padding-bottom: 12px;
+      margin-bottom: 43px;
+      font-size: 32px;
+      font-weight: 500;
+      color: rgba(35, 38, 40, 1);
+
+      &::after {
+        position: absolute;
+        content: "";
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 6px;
+        background: #fcdf1f;
+        border-radius: 11px;
+      }
+    }
+    .liner-selector {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 0;
+      width: 702px;
+      background: #fff;
+      box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      .l-left {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 560px;
+        overflow-x: auto;
+        &::-webkit-scrollbar {
+          width: 0;
+          height: 0;
+          color: transparent;
+          display: none;
+        }
+        .each-item {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin-right: 10px;
+          width: 180px;
+          min-width: 180px;
+          min-height: 200px;
+          padding: 10px 0;
+          background: #f1f1f1;
+          border-radius: 8px;
+          color: #030100;
+          font-size: 24px;
+          &.active {
+            background: rgba(255, 219, 36, 0.5);
+          }
+          &.ban {
+            color: #ccc;
+          }
+          &:nth-last-of-type(1) {
+            margin-right: 0;
+          }
+          .date {
+            padding-bottom: 6px;
+          }
+          .week {
+            padding-bottom: 10px;
+          }
+          .price {
+            color: #fa9723;
+            font-size: 30px;
+          }
+         
+          .discount {
+            padding-top: 12px;
+          }
+        }
+        .sale-out {
+          color: rgba(3, 1, 0, 0.5);
+        }
+      }
+      .l-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10px;
+        width: 72px;
+        height: 200px;
+        border-radius: 8px;
+        background: #ffdb24;
+        .more-date-label {
+          color: #030100;
+          font-size: 24px;
+          line-height: 33px;
+        }
+        .arrow-right {
+          padding-top: 15px;
+          width: 34px;
+          height: 24px;
+        }
+      }
+    }
+  }
+  .inner-selector {
+    .inner-mask {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #000;
+      opacity: 0.6;
+      overflow: hidden;
+      z-index: 9;
+    }
+    .inner-content {
+      position: relative;
+      padding: 40px 24px 118px 24px;
+      width: 100%;
+      height: 1124px;
+      overflow: hidden;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      z-index: 10;
+      background: #fff;
+      border-radius: 20px 20px 0px 0px;
+      .del-icon {
+        position: absolute;
+        top: 14px;
+        right: 24px;
+        width: 44px;
+        height: 44px;
+      }
+      .product-msg {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 30px;
+        .pro-thumb {
+          width: 160px;
+          min-width: 160px;
+          height: 160px;
+          min-height: 160px;
+          background: #d8d8d8;
+        }
+        .pro-right {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: flex-start;
+          padding-left: 16px;
+          height: 160px;
+          .pro-title {
+            width: 445px;
+            color: #030100;
+            font-size: 28px;
+            line-height: 40px;
+            height: 80px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+          }
+          .price {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            .current-price {
+              padding-right: 30px;
+              color: #ff3533;
+              font-size: 36px;
+            }
+            .origin-price {
+              padding-top: 6px;
+              color: #a4a4a4;
+              font-size: 24px;
+              text-decoration: line-through;
+            }
+          }
+        }
+      }
+      .main {
+        // height: 760px;
+        // overflow-y: auto;
+        // overflow-x: hidden;
+        &::-webkit-scrollbar {
+          width: 0;
+          height: 0;
+          color: transparent;
+          display: none;
+        }
+      }
+      .sku {
+        padding-top: 30px;
+        .sku-label {
+          padding-bottom: 30px;
+          color: #333;
+          font-weight: 700;
+          font-size: 28px;
+        }
+        .sku-content {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          flex-wrap: wrap;
+          .sku-item {
+            margin-right: 30px;
+            margin-bottom: 30px;
+            padding: 0 32px;
+            height: 64px;
+            line-height: 64px;
+            text-align: center;
+            color: #333;
+            font-size: 26px;
+            border-radius: 32px;
+            background: #f2f2f2;
+            &:active {
+              color: #ff0000;
+              border: 1px solid #ff0000;
+              background: #fcedea;
+            }
+          }
+        }
+      }
+      .calendar-label {
+        padding-bottom: 30px;
+        color: #333;
+        font-weight: 700;
+        font-size: 28px;
+      }
+    }
+  }
+}
